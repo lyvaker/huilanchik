@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Градиентный фон -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8192C"/>
+      <stop offset="100%" stop-color="#C8111F"/>
+    </linearGradient>
+    <linearGradient id="gear" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F5F4F2"/>
+    </linearGradient>
+    <linearGradient id="spark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4F0"/>
+      <stop offset="100%" stop-color="#00B4D8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="20"/>
+      <feOffset dx="0" dy="12" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.25"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Фон закруглённый -->
+  <rect width="1024" height="1024" rx="225" fill="url(#bg)"/>
+
+  <!-- Шестерёнка большая (12 зубьев) -->
+  <g transform="translate(512, 512)" filter="url(#shadow)">
+    <g fill="url(#gear)">
+      <!-- 12 зубьев через rotation -->
+      <g>
+        <rect x="-55" y="-360" width="110" height="120" rx="14"/>
+      </g>
+      <g transform="rotate(30)">
+        <rect x="-55" y="-360" width="110" height="120" rx="14"/>
+      </g>
+      <g transform="rotate(60)">
+        <rect x="-55" y="-360" width="110" height="120" rx="14"/>
+      </g>
+      <g transform="rotate(90)">
+        <rect x="-55" y="-360" width="110" height="120" rx="14"/>
+      </g>
+      <g transform="rotate(120)">
+        <rect x="-55" y="-360" width="110" height="120" rx="14"/>
+      </g>
+      <g transform="rotate(150)">
+        <rect x="-55" y="-360" width="110" height="120" rx="14"/>
+      </g>
+      <g transform="rotate(180)">
+        <rect x="-55" y="-360" width="110" height="120" rx="14"/>
+      </g>
+      <g transform="rotate(210)">
+        <rect x="-55" y="-360" width="110" height="120" rx="14"/>
+      </g>
+      <g transform="rotate(240)">
+        <rect x="-55" y="-360" width="110" height="120" rx="14"/>
+      </g>
+      <g transform="rotate(270)">
+        <rect x="-55" y="-360" width="110" height="120" rx="14"/>
+      </g>
+      <g transform="rotate(300)">
+        <rect x="-55" y="-360" width="110" height="120" rx="14"/>
+      </g>
+      <g transform="rotate(330)">
+        <rect x="-55" y="-360" width="110" height="120" rx="14"/>
+      </g>
+
+      <!-- Тело шестерёнки -->
+      <circle cx="0" cy="0" r="300"/>
+    </g>
+
+    <!-- Тёмный круг внутри -->
+    <circle cx="0" cy="0" r="220" fill="#1C2B3A"/>
+
+    <!-- AI-искра в центре - стилизованная "AI" -->
+    <g fill="url(#spark)">
+      <!-- Большая искра/спарк (sparkle) -->
+      <path d="M 0,-140
+               L 30,-30
+               L 140,0
+               L 30,30
+               L 0,140
+               L -30,30
+               L -140,0
+               L -30,-30
+               Z" />
+    </g>
+
+    <!-- Малая искра -->
+    <g fill="#00D4F0" opacity="0.85">
+      <path d="M 110,-110
+               L 122,-72
+               L 160,-60
+               L 122,-48
+               L 110,-10
+               L 98,-48
+               L 60,-60
+               L 98,-72
+               Z"/>
+    </g>
+
+    <!-- Ещё одна малая искра -->
+    <g fill="#00D4F0" opacity="0.7">
+      <path d="M -120,90
+               L -111,118
+               L -83,127
+               L -111,136
+               L -120,164
+               L -129,136
+               L -157,127
+               L -129,118
+               Z"/>
+    </g>
+  </g>
+</svg>
